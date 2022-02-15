@@ -70,5 +70,6 @@ class RegisterController extends Controller
             'profile' => $data['profile'],
             'password' => Hash::make($data['password']),
         ]);
+        Session::put('profile', $data['profile']);
     }
 }
