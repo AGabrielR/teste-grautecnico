@@ -13,7 +13,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <?php dd(session)?>
                     {{ __('You are logged in!') }}
                 </div>
             </div>
