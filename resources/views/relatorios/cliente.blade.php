@@ -13,7 +13,7 @@
                 <th>Categoria</th>
             </tr>
         </thead>
-        @foreach ($clientes as $cliente):
+        @foreach ($clientes[0] as $cliente):
             <tr>
                 <td>{{$cliente->nome}}</td>
                 <td>{{$cliente->perfil}}</td>

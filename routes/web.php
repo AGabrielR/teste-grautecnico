@@ -32,4 +32,4 @@ Route::get('/add/client', [ClienteController::class, 'index'])->name('createClie
 
 Route::POST('/register/client', [ClienteController::class, 'store'])->name('registerClient')->middleware('auth');
 
-Route::get('/relatory/client', [ClienteController::class, 'relatory'])->name('relatoryClient')->middleware('auth');
+Route::get('/relatory/client', [ClienteController::class, 'relatory'])->name('relatoryClient');
