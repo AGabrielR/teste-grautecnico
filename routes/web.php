@@ -31,3 +31,5 @@ Route::POST('/register/categoria', [CategoriaController::class, 'store'])->name(
 Route::get('/add/client', [ClienteController::class, 'index'])->name('createClient')->middleware('auth');
 
 Route::POST('/register/client', [ClienteController::class, 'store'])->name('registerClient')->middleware('auth');
+
+Route::get('/relatory/client', [ClienteController::class, 'relatory'])->name('relatoryClient')->middleware('auth');

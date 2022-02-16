@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Cliente;
 use App\Models\Categoria;
 class ClienteController extends Controller
@@ -43,6 +44,20 @@ class ClienteController extends Controller
         Cliente::create($cliente);
         
         return redirect()->route('home');    
+    }
+
+    public function relatory(){
+        $clientes = DB::table('clientes')
+                       ->join('categorias', 'categorias_id', '=', 'categorias.id')
+                       ->get();
+        $qtdClienteCat = DB::table('clientes')
+                        ->select(DB::raw('count(*) as categorias_id'))
+                        ->get();
+        return view('relatorios.cliente',[
+            'clientes' => $clientes,
+            'qtdClienteCat' => $qtdClienteCat,
+        ]);
+
     }
 
     /**
