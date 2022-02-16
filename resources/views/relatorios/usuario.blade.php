@@ -11,7 +11,7 @@
                 <th>Login</th>
                 <th>Perfil</th>
                 @guest @else
-                    @if (auth()->user()->profile === 'ADMINISTRADOR'):
+                    @if (auth()->user()->profile === 'ADMINISTRADOR')
                         <th></th>
                         <th></th>
                     @endif
