@@ -37,16 +37,11 @@ class CategoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        if(Auth::check()){
-            Categoria::create([
-                categoriaNome=>$request['categoriaNome'],
-            ]);
-            return redirect()->route('home');
-        }else{
-            return redirect()->route('login');
-        }        
+    public function store(Request $request){
+        Categoria::create([
+            categoriaNome=>$request['categoriaNome'],
+        ]);
+        return redirect()->route('home');    
     }
 
     /**
