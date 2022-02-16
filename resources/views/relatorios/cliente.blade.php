@@ -5,7 +5,7 @@
 <div class="container">
     <table class="table table-bordered table-hover table-striped">
         <thead class="thead-dark">
-            {{dd($clientes)}}
+            
             <tr>
                 <th>Nome</th>
                 <th>Perfil</th>
