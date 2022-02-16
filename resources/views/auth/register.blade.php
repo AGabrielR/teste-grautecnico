@@ -62,7 +62,7 @@
                         <div class="row mb-3">
                             <label for="profile" class="col-md-4 col-form-label text-md-end">Perfil</label>
                             <div class="col-md-6">
-                                <select name="profile" id="profile" class = "form-select">
+                                <select name="profile" id="profile" class = "form-select" required>
                                     <option selected disabled>Escolha um perfil de usuário</option>
                                     <option value="VISUALIZADOR">Visualizador</option>
                                     <option value="ADMINISTRADOR">Administrador</option>
