@@ -5,7 +5,6 @@
 <div class="container">
     <table class="table table-bordered table-hover table-striped">
         <thead class="thead-dark">
-            
             <tr>
                 <th>Nome</th>
                 <th>Perfil</th>
@@ -24,7 +23,7 @@
                 <td>
                     <form action="">
                         @csrf
-                        <input type="hidden" name="id" value="{{$cliente->id}}">
+                        <input type="hidden" name="id" value="">
                         <button type="submit" class="btn btn-danger">APAGAR</button>
                     </form>
                 </td>
