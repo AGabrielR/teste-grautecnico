@@ -17,8 +17,8 @@
         </thead>
         @foreach ($clientes as $cliente):
             <tr>
-                <td>{{$cliente->nome}}</td>
-                <td>{{$cliente->perfil}}</td>
+                <td>{{$cliente->name}}</td>
+                <td>{{$cliente->profile}}</td>
                 <td>{{$cliente->categoria}}</td>
                 <td></td>
                 <td></td>
