@@ -13,6 +13,13 @@ class UserController extends Controller
         return view('relatorios.usuario',[
             'users' => $users,
         ]);
+    }
 
+    public function destroy($id)
+    {
+        $categoria = Categoria::findOrFail($id);
+        $categoria->delete();
+
+        return redirect()->route('relatoryCat');
     }
 }
