@@ -31,6 +31,7 @@
                         <td></td>
                         <td>
                             <form action="{{route('deleteCliente', $cliente->id)}}" method="POST" @method('delete')>
+                                @method('delete')
                                 @csrf
                                 <input type="hidden" name="id" value="{{$cliente->id}}">
                                 <button class="btn btn-outline-danger">

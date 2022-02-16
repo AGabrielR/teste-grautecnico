@@ -25,7 +25,8 @@
                     @if (auth()->user()->profile === 'ADMINISTRADOR')
                         <td></td>
                         <td>
-                            <form action="{{route('deleteCategoria', $categoria->id)}}" method="POST" @method('delete')>
+                            <form action="{{route('deleteCategoria', $categoria->id)}}" method="POST">
+                                @method('delete')
                                 @csrf
                                 <input type="hidden" name="id" value="{{$categoria->id}}">
                                 <button class="btn btn-outline-danger">
