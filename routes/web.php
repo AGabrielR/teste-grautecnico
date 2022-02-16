@@ -39,7 +39,7 @@ Route::get('/relatory/user', [UserController::class, 'relatory'])->name('relator
 
 Route::get('/relatory/category', [CategoriaController::class, 'relatory'])->name('relatoryCat')->middleware('auth');
 
-Route::delete('/delete/user/{id}', [UserController::class, 'destroy'])->name('deletarUsuario')->middleware('auth');
+Route::delete('/delete/user/{id}', [UserController::class, 'destroy'])->name('delete.user')->middleware('auth');
 
 Route::delete('/delete/client/{id}', [ClienteController::class, 'destroy'])->name('deleteCliente')->middleware('auth');
 
