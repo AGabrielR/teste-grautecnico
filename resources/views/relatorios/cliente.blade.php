@@ -2,6 +2,8 @@
 
 @section('content')
 
+{{var_dump($clientes)}}
+
 <div class="container">
     <table class="table table-bordered table-hover table-striped">
         <thead class="thead-dark">
@@ -13,7 +15,6 @@
         </thead>
         @foreach ($clientes as $cliente):
             <tr>
-                {{dd($cliente)}}
                 <td>{{$cliente->nome}}</td>
                 <td>{{$cliente->perfil}}</td>
                 <td>{{$cliente->categoria}}</td>
