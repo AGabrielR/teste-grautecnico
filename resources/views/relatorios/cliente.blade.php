@@ -2,7 +2,7 @@
 
 @section('content')
 
-{{var_dump($clientes)}}
+{{var_dump($qtdClientesCat)}}
 
 <div class="container">
     <table class="table table-bordered table-hover table-striped">

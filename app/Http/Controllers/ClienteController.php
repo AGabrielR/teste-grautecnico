@@ -47,7 +47,9 @@ class ClienteController extends Controller
     }
 
     public function relatory(){
-        $clientes = Cliente::all();
+        $clientes = DB::table('clientes')
+                       ->join('categorias', 'categorias_id', '=', 'categorias.id')
+                       ->get();
         $qtdClienteCat = DB::table('clientes')
                         ->select(DB::raw('count(*) as categorias_id'))
                         ->get();
