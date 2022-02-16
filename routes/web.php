@@ -28,5 +28,6 @@ Route::get('/add/categoria', [CategoriaController::class, 'index'])->name('creat
 
 Route::POST('/register/categoria', [CategoriaController::class, 'store'])->name('registerCategory')->middleware('auth');
 
-Route::get('/add/client', [ClienteController::class, 'index'])->name('createClient');
-//->middleware('auth');
+Route::get('/add/client', [ClienteController::class, 'index'])->name('createClient')->middleware('auth');
+
+Route::POST('/register/client', [ClienteController::class, 'store'])->name('registerClient')->middleware('auth');

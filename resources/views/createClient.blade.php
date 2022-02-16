@@ -10,15 +10,16 @@
                             <form method="POST" action="">
                             @csrf
                             <div class="row mb-3">
-                                <label class="col-md-4 col-form-label text-md-end" for="">Nome do Cliente</label>
-                                <div class="col-md-8">
-                                    <input type="text" name="clienteNome" id="" class="form-control">
+                                <label class="col-md-4 col-form-label text-md-end" for="clienteNome">Nome do Cliente</label>
+                                <div class="col-md-6">
+                                    <input type="text" name="clienteNome" id="clienteNome" class="form-control" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-md-4 col-form-label text-md-end" for="">Categoria</label>
-                                <div class="col-md-8">
+                                <div class="col-md-6">
                                     <select name="category" id="" class="form-select" required>  
+                                        <option selected disabled>Escolha uma Categoria</option>
                                         @foreach ($categories as $category)
                                             <option value="{{$category->id}}">{{$category->categoriaNome}}</option>
                                         @endforeach
@@ -30,6 +31,7 @@
                                 <div class="col-md-6">
                                     <select name="profile" id="profile" class = "form-select" required>
                                         <option selected disabled>Escolha um perfil de usuário</option>
+                                        <option value="OPERADOR">Operador</option>
                                         <option value="VISUALIZADOR">Visualizador</option>
                                         <option value="ADMINISTRADOR">Administrador</option>
                                     </select>

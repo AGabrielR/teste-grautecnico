@@ -38,7 +38,11 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cliente = $request->all();
+
+        Cliente::create($cliente);
+        
+        return redirect()->route('home');    
     }
 
     /**
