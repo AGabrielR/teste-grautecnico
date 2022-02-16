@@ -17,16 +17,8 @@
                 <td>{{$cliente->nome}}</td>
                 <td>{{$cliente->perfil}}</td>
                 <td>{{$cliente->categoria}}</td>
-                <td>
-                    
-                </td>
-                <td>
-                    <form action="">
-                        @csrf
-                        <input type="hidden" name="id" value="">
-                        <button type="submit" class="btn btn-danger">APAGAR</button>
-                    </form>
-                </td>
+                <td></td>
+                <td></td>
             </tr>
         @endforeach
     </table>
