@@ -25,7 +25,7 @@
                 <td>{{$user->email}}</td>
                 <td>{{$user->profile}}</td>
                 @guest @else
-                    @if (auth()->user()->profile === 'ADMINISTRADOR'):
+                    @if (auth()->user()->profile === 'ADMINISTRADOR')
                         <td></td>
                         <td> 
                             @if(auth()->user()->id == $user->id)

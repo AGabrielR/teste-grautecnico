@@ -13,7 +13,7 @@
                 <th>Perfil</th>
                 <th>Categoria</th>
                 @guest @else
-                    @if (auth()->user()->profile === 'ADMINISTRADOR'):
+                    @if (auth()->user()->profile === 'ADMINISTRADOR')
                         <th></th>
                         <th></th>
                     @endif
@@ -27,7 +27,7 @@
                 <td>{{$cliente->profile}}</td>
                 <td>{{$cliente->categoriaNome}}</td>
                 @guest @else
-                    @if (auth()->user()->profile === 'ADMINISTRADOR'):
+                    @if (auth()->user()->profile === 'ADMINISTRADOR')
                         <td></td>
                         <td>
                             <form action="{{route('deleteCliente', $cliente->id)}}">

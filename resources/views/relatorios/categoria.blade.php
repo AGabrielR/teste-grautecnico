@@ -9,7 +9,7 @@
                 <td>#</td>
                 <th>Categoria</th>
                 @guest @else
-                    @if (auth()->user()->profile === 'ADMINISTRADOR'):
+                    @if (auth()->user()->profile === 'ADMINISTRADOR')
                         <th></th>
                         <th></th>
                     @endif
