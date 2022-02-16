@@ -14,9 +14,10 @@
         </thead>
         @foreach ($clientes as $cliente)
             <tr>
-                <td>{{$cliente}}</td>
-                <!--<td>{//{$cliente->perfil}}</td>
-                <td>{//{$cliente->categoria}}</td>
+                {{dd($cliente)}}
+                <td>{{$cliente->nome}}</td>
+                <td>{{$cliente->perfil}}</td>
+                <td>{{$cliente->categoria}}</td>
                 <td>
                     
                 </td>
@@ -26,7 +27,7 @@
                         <input type="hidden" name="id" value="{{$cliente->id}}">
                         <button type="submit" class="btn btn-danger">APAGAR</button>
                     </form>
-                </td>-->
+                </td>
             </tr>
         @endforeach
     </table>
