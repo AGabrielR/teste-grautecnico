@@ -36,7 +36,7 @@
                                     </svg>
                                 </button>
                             @else
-                                <form action="{{route('deletarUsuario'), $user->id}}">
+                                <form action="{{route('deletarUsuario'), $user->id}}" method="POST" @method('delete')>
                                         @csrf
                                         <input type="hidden" name="id" value="{{$user->id}}">
                                         <button class="btn btn-outline-danger">

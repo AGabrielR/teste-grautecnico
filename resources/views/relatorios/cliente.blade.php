@@ -30,7 +30,7 @@
                     @if (auth()->user()->profile === 'ADMINISTRADOR')
                         <td></td>
                         <td>
-                            <form action="{{route('deleteCliente', $cliente->id)}}">
+                            <form action="{{route('deleteCliente', $cliente->id)}}" method="POST" @method('delete')>
                                 @csrf
                                 <input type="hidden" name="id" value="{{$cliente->id}}">
                                 <button class="btn btn-outline-danger">
