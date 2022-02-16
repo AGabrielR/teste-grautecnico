@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/add/categoria', [CategoriaController::class, 'index'])->name('createCategory')->middleware('auth');
+Route::get('/add/categoria', [CategoriaController::class, 'index'])->name('createCategory');
 
-Route::POST('/register/categoria', [CategoriaController::class, 'store'])->name('registerCategory')->middleware('auth');
+Route::POST('/register/categoria', [CategoriaController::class, 'store'])->name('registerCategory');
+//->middleware('auth');

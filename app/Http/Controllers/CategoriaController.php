@@ -38,9 +38,10 @@ class CategoriaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request){
-        Categoria::create([
-            categoriaNome=>$request['categoriaNome'],
-        ]);
+        $category = $request->all();
+
+        Categoria::create($category);
+        
         return redirect()->route('home');    
     }
 
