@@ -1,0 +1,52 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Registrar Cliente') }}</div>
+                        <div class="card-body">
+                            <form method="POST" action="">
+                            @csrf
+                            <div class="row mb-3">
+                                <label class="col-md-4 col-form-label text-md-end" for="">Nome do Cliente</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="clienteNome" id="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="col-md-4 col-form-label text-md-end" for="">Categoria</label>
+                                <div class="col-md-8">
+                                    <select name="category" id="">  
+                                        @foreach ($categories as $category)
+                                            <option value="{{$category}}">{{$category}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="profile" class="col-md-4 col-form-label text-md-end">Perfil</label>
+                                <div class="col-md-6">
+                                    <select name="profile" id="profile" class = "form-select" required>
+                                        <option selected disabled>Escolha um perfil de usuário</option>
+                                        <option value="VISUALIZADOR">Visualizador</option>
+                                        <option value="ADMINISTRADOR">Administrador</option>
+                                    </select>
+                                </div>
+                            </div>
+                                <div class="row mb-0">
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-success">
+                                            Criar
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

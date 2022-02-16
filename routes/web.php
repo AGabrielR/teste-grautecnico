@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/add/categoria', [CategoriaController::class, 'index'])->name('createCategory')->middleware('auth');
 
 Route::POST('/register/categoria', [CategoriaController::class, 'store'])->name('registerCategory')->middleware('auth');
+
+Route::get('/add/client', [ClienteController::class, 'index'])->name('createClient');
+//->middleware('auth');
