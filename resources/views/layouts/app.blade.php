@@ -51,9 +51,9 @@
                         <li class="nav-item dropdown">
                             <a class= "nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Relatórios</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Usuário</a></li>
-                                <li><a class="dropdown-item" href="#">Cliente</a></li>
-                                <li><a class="dropdown-item" href="#">Categoria</a></li>
+                                <li><a class="dropdown-item" href="{{ route ('relatoryUser')}}">Usuário</a></li>
+                                <li><a class="dropdown-item" href="{{ route ('relatoryClient')}}">Cliente</a></li>
+                                <li><a class="dropdown-item" href="{{ route ('relatoryCat')}}">Categoria</a></li>
                             </ul>
                         </li>
                     </ul>

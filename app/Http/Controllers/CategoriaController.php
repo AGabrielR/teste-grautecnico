@@ -45,6 +45,15 @@ class CategoriaController extends Controller
         return redirect()->route('home');    
     }
 
+    public function relatory(){
+        $categorias = Categoria::all();
+
+        return view('relatorios.categoria',[
+            'categorias' => $categorias,
+        ]);
+
+    }
+
     /**
      * Display the specified resource.
      *
