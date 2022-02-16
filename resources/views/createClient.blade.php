@@ -20,7 +20,7 @@
                                 <div class="col-md-8">
                                     <select name="category" id="" class="form-select" required>  
                                         @foreach ($categories as $category)
-                                            <option value="{{$category->id()}}">{{$category->categoriaNome()}}</option>
+                                            <option value="{{$category->id}}">{{$category->categoriaNome}}</option>
                                         @endforeach
                                     </select>
                                 </div>
