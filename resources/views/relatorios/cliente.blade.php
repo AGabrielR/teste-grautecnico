@@ -6,8 +6,9 @@
 
 <div class="container">
     <table class="table table-bordered table-hover table-striped">
-        <thead class="thead-dark">
+        <thead class="table-dark">
             <tr>
+                <th>#</th>
                 <th>Nome</th>
                 <th>Perfil</th>
                 <th>Categoria</th>
@@ -17,6 +18,7 @@
         </thead>
         @foreach ($clientes as $cliente):
             <tr>
+                <td>{{$cliente->id}}</td>
                 <td>{{$cliente->name}}</td>
                 <td>{{$cliente->profile}}</td>
                 <td>{{$cliente->categoriaNome}}</td>

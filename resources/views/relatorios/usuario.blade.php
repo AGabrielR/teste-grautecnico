@@ -2,36 +2,29 @@
 
 @section('content')
 
-{{var_dump($qtdClienteCat)}}
-
 <div class="container">
     <table class="table table-bordered table-hover table-striped">
-        <thead class="thead-dark">
+        <thead class="table-dark">
             <tr>
+                <th>#</th>
                 <th>Nome</th>
+                <th>Login</th>
                 <th>Perfil</th>
-                <th>Categoria</th>
                 <th></th>
                 <th></th>
             </tr>
         </thead>
-        @foreach ($clientes as $cliente):
+        @foreach ($users as $user):
             <tr>
-                <td>{{$cliente->name}}</td>
-                <td>{{$cliente->profile}}</td>
-                <td>{{$cliente->categoriaNome}}</td>
+                <td>{{$user->id}}</td>
+                <td>{{$user->name}}</td>
+                <td>{{$user->email}}</td>
+                <td>{{$user->profile}}</td>
                 <td></td>
                 <td></td>
             </tr>
         @endforeach
     </table>
-
-    <div class="row">
-        <div class="col-md-5">
-            <p>"Gráfico ficará aqui: "</p>
-            
-        </div>
-    </div>
 </div>
 
 @endsection
