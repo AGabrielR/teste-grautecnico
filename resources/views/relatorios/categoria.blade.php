@@ -22,7 +22,7 @@
                 <td>{{$categoria->id}}</td>
                 <td>{{$categoria->categoriaNome}}</td>
                 @guest @else
-                    @if (auth()->user()->profile === 'ADMINISTRADOR'):
+                    @if (auth()->user()->profile === 'ADMINISTRADOR')
                         <td></td>
                         <td>
                             <form action="{{route('deleteCategoria', $categoria->id)}}">

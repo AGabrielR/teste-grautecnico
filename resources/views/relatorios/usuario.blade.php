@@ -36,7 +36,7 @@
                                     </svg>
                                 </button>
                             @else
-                                <form action="{{route('deleteUser'), $user->id}}">
+                                <form action="{{route('destroyUser'), $user->id}}">
                                         <input type="hidden" name="id" value="{{$user->id}}">
                                         <button class="btn btn-outline-danger">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
