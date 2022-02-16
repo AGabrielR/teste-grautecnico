@@ -16,7 +16,7 @@ class CreateClientesTable extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Categoria::class);
+            $table->foreignId('categoria_id');
             $table->string('name');
             $table->string('profile');
             $table->timestamps();

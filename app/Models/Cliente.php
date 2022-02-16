@@ -9,6 +9,10 @@ class Cliente extends Model
 {
     use HasFactory;
 
+    public function post(){
+        return $this->belongsTo(Categoria::class);
+    }
+    
     protected $fillable = [
         'name',
         'category',
