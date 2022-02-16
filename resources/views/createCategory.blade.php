@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">{{ __('Registrar Usuário') }}</div>
                         <div class="card-body">
-                            <form action="{{route('registerCategory')}}">
+                            <form method="POST" action="{{route('registerCategory')}}">
                             @csrf
                             <div class="row mb-3">
                                 <label class="col-md-4 col-form-label text-md-end" for="">Categoria</label>

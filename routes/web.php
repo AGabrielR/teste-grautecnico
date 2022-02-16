@@ -25,4 +25,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/add/categoria', [CategoriaController::class, 'index'])->name('createCategory');
 
-Route::post('/register/categoria', [CategoriaController::class, 'store'])->name('registerCategory');
+Route::POST('/register/categoria', [CategoriaController::class, 'store'])->name('registerCategory');
