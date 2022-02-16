@@ -2,8 +2,6 @@
 
 @section('content')
 
-{{dd($clientes)}}
-
 <div class="container">
     <table class="table table-bordered table-hover table-striped">
         <thead class="table-dark">
