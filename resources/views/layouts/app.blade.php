@@ -44,7 +44,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="{{ route('register') }}">Usuário</a></li>
                                 <li><a class="dropdown-item" href="#">Cliente</a></li>
-                                <li><a class="dropdown-item" href="{{ route('createCategoria') }}">Categoria</a></li>
+                                <li><a class="dropdown-item" href="{{ route('createCategory') }}">Categoria</a></li>
                             </ul>
                         </li>
                         @endif
