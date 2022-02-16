@@ -99,6 +99,6 @@ class CategoriaController extends Controller
         $categoria = Categoria::findOrFail($id);
         $categoria->delete();
 
-        return redirect()->route('relatoryCat');
+        redirect()->route('relatoryCat');
     }
 }
