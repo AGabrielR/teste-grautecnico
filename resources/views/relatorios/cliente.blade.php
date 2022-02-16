@@ -11,6 +11,8 @@
                 <th>Nome</th>
                 <th>Perfil</th>
                 <th>Categoria</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         @foreach ($clientes as $cliente):
@@ -27,9 +29,7 @@
     <div class="row">
         <div class="col-md-5">
             <p>"Gráfico ficará aqui: "</p>
-            @foreach ($qtdClienteCat as $clienteCat):
-                {{$clienteCat}}
-            @endforeach
+            
         </div>
     </div>
 </div>
