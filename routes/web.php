@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,6 @@ Route::POST('/register/client', [ClienteController::class, 'store'])->name('regi
 
 Route::get('/relatory/client', [ClienteController::class, 'relatory'])->name('relatoryClient')->middleware('auth');
 
-Route::get('/relatory/user', [ClienteController::class, 'relatory'])->name('relatoryUser')->middleware('auth');
+Route::get('/relatory/user', [UserController::class, 'relatory'])->name('relatoryUser')->middleware('auth');
 
 Route::get('/relatory/category', [CategoriaController::class, 'relatory'])->name('relatoryCat')->middleware('auth');
