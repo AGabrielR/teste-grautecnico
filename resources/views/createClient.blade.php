@@ -18,9 +18,9 @@
                             <div class="row mb-3">
                                 <label class="col-md-4 col-form-label text-md-end" for="">Categoria</label>
                                 <div class="col-md-8">
-                                    <select name="category" id="">  
+                                    <select name="category" id="" class="form-select" required>  
                                         @foreach ($categories as $category)
-                                            <option value="{{$category}}">{{$category}}</option>
+                                            <option value="{{$category->id()}}">{{$category->categoriaNome()}}</option>
                                         @endforeach
                                     </select>
                                 </div>
