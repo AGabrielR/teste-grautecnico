@@ -3,6 +3,8 @@
 @section('content')
 
 {{var_dump($qtdClienteCat)}}
+{{var_dump($clientes)}}
+
 
 <div class="container">
     <table class="table table-bordered table-hover table-striped">
@@ -19,7 +21,7 @@
             <tr>
                 <td>{{$cliente->name}}</td>
                 <td>{{$cliente->profile}}</td>
-                <td>{{$cliente->categoria}}</td>
+                <td>{{$cliente->categoriaNome}}</td>
                 <td></td>
                 <td></td>
             </tr>
