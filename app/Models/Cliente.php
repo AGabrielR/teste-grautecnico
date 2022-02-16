@@ -15,7 +15,7 @@ class Cliente extends Model
     
     protected $fillable = [
         'name',
-        'category',
+        'categoria_id',
         'profile',
     ];
 }
