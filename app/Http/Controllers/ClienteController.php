@@ -82,8 +82,12 @@ class ClienteController extends Controller
     public function edit($id)
     {
         $cliente = Cliente::findOrFail($id);
+        $categories = Categoria::all();
 
-        return view('updaters.client')->with('cliente', $cliente);
+        return view('updaters.client',[
+            'cliente' => $cliente,
+            'categories' => $categories,
+        ]);
     }
 
     /**
