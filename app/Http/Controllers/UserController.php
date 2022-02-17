@@ -16,9 +16,9 @@ class UserController extends Controller
     }
 
     public function edit($id){
-        $usuario = User::findOrFail($id);
+        $user = User::findOrFail($id);
 
-        return view('updaters.user')->with('usuario', $usuario);
+        return view('updaters.user')->with('user', $user);
     }
 
     public function update(Request $request, $id)
