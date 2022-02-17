@@ -53,11 +53,8 @@
 
     <div class="row">
         <div class="col-md-5">
-            <canvas id="myChart" width="400" height="400"></canvas>
+            
         </div>
     </div>
 </div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 @endsection
