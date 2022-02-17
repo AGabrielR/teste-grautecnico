@@ -98,7 +98,7 @@ class ClienteController extends Controller
         $cliente = Cliente::findOrFail($id);
         $cliente->update($request->all());
 
-        return view('relatorios.cliente');
+        return view('home');
     }
 
     /**

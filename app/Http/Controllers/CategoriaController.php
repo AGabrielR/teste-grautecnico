@@ -90,7 +90,7 @@ class CategoriaController extends Controller
         $categoria = Categoria::findOrFail($id);
         $categoria->update($request->all());
 
-        return view('relatorios.categoria');
+        return view('home');
     }
 
     /**

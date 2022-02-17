@@ -26,7 +26,7 @@ class UserController extends Controller
         $usuario = User::findOrFail($id);
         $usuario->update($request->all());
 
-        return view('relatorios.usuario');
+        return view('home');
     }
 
     public function destroy($id)
