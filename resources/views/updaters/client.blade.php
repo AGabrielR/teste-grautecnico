@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">{{ __('Alterar Cliente') }}</div>
                         <div class="card-body">
-                            <form method="POST" action="{{route('updateClient, $cliente->id')}}">
+                            <form method="POST" action="{{route('updateClient', $cliente->id)}}">
                             @csrf
                             @method('put')
                             <div class="row mb-3">

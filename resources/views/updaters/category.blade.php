@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">{{ __('Alterar Categoria') }}</div>
                         <div class="card-body">
-                            <form method="POST" action="{{route('updateCategory')}}">
+                            <form method="POST" action="{{route('updateCategoria', $categoria->id)}}">
                             @csrf
                             @method('PUT')
                             <div class="row mb-3">
