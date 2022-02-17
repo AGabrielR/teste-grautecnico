@@ -73,7 +73,9 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categoria = Categoria::findOrFail($id);
+
+        return view('updaters.category')->with('categoria', $categoria);
     }
 
     /**
@@ -85,7 +87,10 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $categoria = Categoria::findOrFail($id);
+        $categoria->update($request->all());
+
+        return view('relatorios.categoria');
     }
 
     /**

@@ -44,3 +44,9 @@ Route::delete('/delete/user/{id}', [UserController::class, 'destroy'])->name('de
 Route::delete('/delete/client/{id}', [ClienteController::class, 'destroy'])->name('deleteCliente')->middleware('auth');
 
 Route::delete('/delete/category/{id}', [CategoriaController::class, 'destroy'])->name('deleteCategoria')->middleware('auth');
+
+Route::put('/update/user/{id}', [UserController::class, 'update'])->name('updateUser')->middleware('auth');
+
+Route::put('/update/client/{id}', [ClienteController::class, 'update'])->name('updateCliente')->middleware('auth');
+
+Route::ptu('/update/category/{id}', [CategoriaController::class, 'update'])->name('updateCategoria')->middleware('auth');

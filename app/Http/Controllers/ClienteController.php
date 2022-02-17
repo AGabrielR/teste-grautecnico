@@ -81,7 +81,9 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cliente = Cliente::findOrFail($id);
+
+        return view('updaters.client')->with('cliente', $cliente);
     }
 
     /**
@@ -93,7 +95,10 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cliente = Cliente::findOrFail($id);
+        $cliente->update($request->all());
+
+        return view('relatorios.cliente');
     }
 
     /**
