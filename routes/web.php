@@ -49,4 +49,4 @@ Route::put('/update/user/{id}', [UserController::class, 'update'])->name('update
 
 Route::put('/update/client/{id}', [ClienteController::class, 'update'])->name('updateCliente')->middleware('auth');
 
-Route::ptu('/update/category/{id}', [CategoriaController::class, 'update'])->name('updateCategoria')->middleware('auth');
+Route::put('/update/category/{id}', [CategoriaController::class, 'update'])->name('updateCategoria')->middleware('auth');
