@@ -45,6 +45,12 @@ Route::delete('/delete/client/{id}', [ClienteController::class, 'destroy'])->nam
 
 Route::delete('/delete/category/{id}', [CategoriaController::class, 'destroy'])->name('deleteCategoria')->middleware('auth');
 
+Route::get('/edit/user/{id}', [UserController::class, 'edit'])->name('editUser')->middleware('auth');
+
+Route::get('/edit/client/{id}', [ClienteController::class, 'edit'])->name('editCliente')->middleware('auth');
+
+Route::get('/edit/category/{id}', [CategoriaController::class, 'edit'])->name('editCat')->middleware('auth');
+
 Route::put('/update/user/{id}', [UserController::class, 'update'])->name('updateUser')->middleware('auth');
 
 Route::put('/update/client/{id}', [ClienteController::class, 'update'])->name('updateCliente')->middleware('auth');
