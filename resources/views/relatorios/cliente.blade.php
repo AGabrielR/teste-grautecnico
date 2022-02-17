@@ -53,7 +53,6 @@
 
     <div class="row">
         <div class="col-md-5">
-            <p>"Gráfico ficará aqui: "</p>
             <canvas id="myChart" width="400" height="400"></canvas>
         </div>
     </div>
