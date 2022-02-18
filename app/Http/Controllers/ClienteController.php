@@ -60,8 +60,8 @@ class ClienteController extends Controller
         
         return view('relatorios.cliente',[
             'clientes' => $clientes,
-            compact('qtdClienteCat'),
-            compact('categorias'),
+            'qtdClienteCat' => $qtdClienteCat,
+            'categorias' => $categorias,
         ]);
 
     }
