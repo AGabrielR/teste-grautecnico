@@ -82,7 +82,7 @@
     }
     
     const myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'pie',
         data: {
             labels: categoriaNome,
             datasets: [{
