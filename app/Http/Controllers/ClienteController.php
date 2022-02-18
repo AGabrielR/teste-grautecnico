@@ -52,7 +52,7 @@ class ClienteController extends Controller
                        ->orderByRaw('clientes.id ASC')
                        ->get(['clientes.id as id', 'name', 'categoriaNome', 'profile']);
         $qtdClienteCat = DB::table('clientes')
-                        ->select(DB::raw('categoria_id, count(categoria_id) as qtdClienteCat'))
+                        ->select(DB::raw('categoria_id, count(categoria_id) as getQtd'))
                         ->groupBy('categoria_id')
                         ->whereNotNull('name')
                         ->orderByRaw('categoria_id ASC')
