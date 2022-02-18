@@ -66,11 +66,19 @@
     let categorias = {!! json_encode($categorias->toArray()) !!};
 
     let categoriaNome = [];
+    let qtdClientes = [];
 
     for (let index = 0; index < categorias.length; index++) {
         categoriaNome.push(
             categorias[index].categoriaNome
         );
+    }
+
+    for (let index = 0; index < qtdClientesCat.length; index++) {
+        qtdClientes.push(
+            qtdClientesCat[index].qtdClientesCat
+        );
+        
     }
     
     const myChart = new Chart(ctx, {
