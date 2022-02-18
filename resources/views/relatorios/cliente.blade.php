@@ -65,7 +65,7 @@
     let qtdClientesCat = {!! json_encode($qtdClienteCat->toArray()) !!};
     let categorias = {!! json_encode($categorias->toArray()) !!};
 
-    let CategoriaNome = [];
+    let categoriaNome = [];
 
     for (let index = 0; index < categorias.length; index++) {
         categoriaNome.push({
