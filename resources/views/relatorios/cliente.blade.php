@@ -63,7 +63,7 @@
     const ctx = document.getElementById('myChart').getContext('2d');
     
     let qtdClientesCat = {!! json_encode($qtdClienteCat->toArray()) !!};
-    let categorias = {!! json_encode($categorias->categoriaNome->toArray()) !!};
+    let categorias = {!! json_encode($categorias->toArray()) !!};
     
     const myChart = new Chart(ctx, {
         type: 'bar',
