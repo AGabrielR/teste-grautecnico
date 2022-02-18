@@ -78,7 +78,7 @@
     for (let index = 0; index < qtdClientesCat.length; index++) {
         let idCat = qtdClientesCat[index].categoria_id;
         idCat--;
-        qtdClientes[idCat] = qtdClientesCat[index].getQtd
+        qtdClientes[idCat] = qtdClientesCat[index].getqtd
     }
     
     const myChart = new Chart(ctx, {
