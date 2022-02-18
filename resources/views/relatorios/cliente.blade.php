@@ -65,10 +65,12 @@
     let qtdClientesCat = {!! json_encode($qtdClienteCat->toArray()) !!};
     let categorias = {!! json_encode($categorias->toArray()) !!};
 
+    let CategoriaNome = [];
+
     for (let index = 0; index < categorias.length; index++) {
-        let categoriaNome = [
-            {index: categorias[index].categoriaNome},
-        ];
+        categoriaNome.push({
+            index: categorias[index].categoriaNome
+        });
     }
     
     const myChart = new Chart(ctx, {
