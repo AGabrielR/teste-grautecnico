@@ -55,9 +55,13 @@ class ClienteController extends Controller
                         ->select(DB::raw('count(*) as categoria_id'))
                         ->groupBy('categoria_id')
                         ->get();
+
+        $categorias = Categoria::all();
+        
         return view('relatorios.cliente',[
             'clientes' => $clientes,
-            'qtdClienteCat' => $qtdClienteCat,
+            compact('qtdClienteCat'),
+            compact('categorias'),
         ]);
 
     }
