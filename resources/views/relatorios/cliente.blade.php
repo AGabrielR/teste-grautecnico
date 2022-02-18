@@ -76,7 +76,7 @@
 
     for (let index = 0; index < qtdClientesCat.length; index++) {
         qtdClientes.push(
-            qtdClientesCat[index].qtdClientesCat
+            qtdClientesCat[index].qtdClienteCat
         );
         
     }
