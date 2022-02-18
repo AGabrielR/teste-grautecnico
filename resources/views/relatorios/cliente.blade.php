@@ -51,7 +51,7 @@
         @endforeach
     </table>
 
-    <div class="row">
+    <div class="row col-md-4 mt-1">
         <canvas id="myChart" width="400" height="400"></canvas>
     </div>
 </div>
