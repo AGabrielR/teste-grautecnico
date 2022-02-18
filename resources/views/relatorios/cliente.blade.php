@@ -64,11 +64,17 @@
     
     let qtdClientesCat = {!! json_encode($qtdClienteCat->toArray()) !!};
     let categorias = {!! json_encode($categorias->toArray()) !!};
+
+    for (let index = 0; index < categorias.length; index++) {
+        let categoriaNome = [
+            {index: categorias[index].categoriaNome},
+        ];
+    }
     
     const myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: categorias,
+            labels: categoriaNome,
             datasets: [{
                 label: 'Clientes por categoria',
                 data: qtdClientesCat,
