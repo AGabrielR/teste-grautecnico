@@ -69,7 +69,7 @@
 
     for (let index = 0; index < categorias.length; index++) {
         categoriaNome.push({
-            categorias[index].categoriaNome
+            index: categorias[index].categoriaNome
         });
     }
     
