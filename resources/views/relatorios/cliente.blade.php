@@ -66,7 +66,6 @@
     let categorias = {!! json_encode($categorias->toArray()) !!};
 
     let categoriaNome = [];
-    let qtdClientes = [];
 
     for (let index = 0; index < categorias.length; index++) {
         categoriaNome.push(
@@ -74,11 +73,11 @@
         );
     }
 
+    let qtdClientes = Array(categorias.length);
+    
     for (let index = 0; index < qtdClientesCat.length; index++) {
-        qtdClientes.push(
-            qtdClientesCat[index].getQtd
-        );
-        
+        let idCat = qtdClientesCat[index].categoria_id--;
+        qtdClientes[idCat] = qtdClientesCat[index].getQtd
     }
     
     const myChart = new Chart(ctx, {
