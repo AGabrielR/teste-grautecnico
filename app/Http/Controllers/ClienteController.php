@@ -54,6 +54,7 @@ class ClienteController extends Controller
         $qtdClienteCat = DB::table('clientes')
                         ->select(DB::raw('categoria_id, count(categoria_id) as qtdClienteCat'))
                         ->groupBy('categoria_id')
+                        ->where('categoria_id', 'IS NOT', 'NULL')
                         ->orderByRaw('categoria_id ASC')
                         ->get();
 
