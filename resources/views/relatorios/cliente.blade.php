@@ -77,7 +77,7 @@
     
     for (let index = 0; index < qtdClientesCat.length; index++) {
         let idCat = qtdClientesCat[index].categoria_id;
-        let idCat --;
+        idCat--;
         qtdClientes[idCat] = qtdClientesCat[index].getQtd
     }
     
