@@ -68,15 +68,15 @@
     let categoriaNome = [];
 
     for (let index = 0; index < categorias.length; index++) {
-        categoriaNome.push({
-            index: categorias[index].categoriaNome
-        });
+        categoriaNome.push(
+            categorias[index].categoriaNome
+        );
     }
     
     const myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: 'Clientes por categoria',
+            labels: categoriaNome,
             datasets: [{
                 label: categoriaNome,
                 data: qtdClientesCat,
